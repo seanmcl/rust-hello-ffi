@@ -1,9 +1,14 @@
-$ make
-cargo build
-    Updating registry `https://github.com/rust-lang/crates.io-index`
-   Compiling libc v0.2.48
-   Compiling stringtools v0.0.1 ...
-    Finished dev [unoptimized + debuginfo] target(s) in 4.63 secs
-gcc -o ffi -L target/debug -lstringtools ffi.c
-./ffi
-6
+A tiny experiment to show you can call Rust from C (and thereby most any language).
+From ffi.c, this passes two C strings to a Rust library which returns the sum of 
+the lengths as a C int.
+
+
+    $ make
+    cargo build
+        Updating registry `https://github.com/rust-lang/crates.io-index`
+       Compiling libc v0.2.48
+       Compiling stringtools v0.0.1 ...
+        Finished dev [unoptimized + debuginfo] target(s) in 4.63 secs
+    gcc -o ffi -L target/debug -lstringtools ffi.c
+    ./ffi
+    6   
