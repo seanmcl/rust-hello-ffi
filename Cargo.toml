@@ -1,0 +1,11 @@
+[package]
+name = "stringtools"
+version = "0.0.1"
+authors = ["Sean McLaughlin <seanmcl@gmail.com>"]
+
+[lib]
+name = "stringtools"
+crate-type = ["dylib"]
+
+[dependencies]
+libc = "0.2.48"
